@@ -8,9 +8,17 @@ public class playerMovement : MonoBehaviour
     public float moveaSpeed;
     public Rigidbody2D rb;
 
+
     // Update is called once per frame
     void Update()
     {
-        
+        //Input
+        Input.GetAxisRaw("Horizontal");
+
+    }
+
+     void FixedUpdate()
+    {
+        //Movement
     }
 }
