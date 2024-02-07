@@ -12,7 +12,6 @@ public class enemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnPipe();
     }
 
     // Update is called once per frame
@@ -24,13 +23,13 @@ public class enemySpawner : MonoBehaviour
         }
         else
         {
-            spawnPipe();
+            spawnEnemy();
             timer = 0;
         }
 
     }
 
-    void spawnPipe()
+    void spawnEnemy()
     {
         float lowestPoint = transform.position.y - heightOffset;
         float highestPoint = transform.position.y + heightOffset;
