@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4478423783903948155}
   - component: {fileID: 5630394048425834288}
   - component: {fileID: 6610229368104211503}
+  - component: {fileID: -1992613625513356138}
   m_Layer: 0
   m_Name: Enemy (1)
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,5 +98,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74da8e526c5e5974d9ce3e1767d005c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  bullet: {fileID: 6239886807180902726, guid: 2eb1c33a9730cd4409c9b175c7e2fa9f, type: 3}
+  enemyHealth: 0
+  maxHealth: 3
+  player: {fileID: 5842960031558797961, guid: dd053a8b94440f9438bc5a90db8330d3, type: 3}
   speed: 2
+--- !u!58 &-1992613625513356138
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7656586235876231856}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.48
