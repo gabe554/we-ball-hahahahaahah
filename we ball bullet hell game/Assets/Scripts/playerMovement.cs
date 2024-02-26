@@ -9,10 +9,21 @@ public class playerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Camera cam;
 
+    public float activeMoveSpeed;
+    public float dashSpeed;
+
+    public float dashLength = .5f, dashCoolDown = 1f;
+
+    private float dashCounter;
+    private float dashCoolCounter;
+
     Vector2 movement;
     Vector2 mousePos;
 
-
+    void Start()
+    {
+        activeMoveSpeed = moveSpeed;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -21,11 +32,36 @@ public class playerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if(dashCoolCounter <= 0 && dashCounter <= 0)
+            {
+                activeMoveSpeed = dashSpeed;
+                dashCounter = dashLength;
+            }
+        }
+        if (dashCounter > 0)
+        {
+            dashCounter -= Time.deltaTime;
+
+            if(dashCounter <= 0)
+            {
+                activeMoveSpeed = moveSpeed;
+                dashCoolCounter = dashCoolDown;
+            }
+        }
+
+        if (dashCoolCounter > 0)
+        {
+            dashCoolCounter -= Time.deltaTime;
+        }
+
     }
 
      void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * activeMoveSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDir = mousePos - rb.position;
 
