@@ -460,7 +460,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 178168744}
         m_TargetAssemblyTypeName: sceneChange, Assembly-CSharp
-        m_MethodName: click
+        m_MethodName: restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
