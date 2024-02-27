@@ -12,7 +12,10 @@ public class EnemySpawnernumbertwo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        float lowestPoint2 = transform.position.x - widthOffset;
+        float highestPoint2 = transform.position.x + widthOffset;
+
+        Instantiate(Enemy, new Vector3(Random.Range(lowestPoint2, highestPoint2), transform.position.y, 0), transform.rotation);
     }
 
     // Update is called once per frame
