@@ -5,13 +5,20 @@ using UnityEngine.UI;
 
 public class logicScript : MonoBehaviour
 {
-    public int playerScore;
+    public static int playerScore = 0;
     public Text scoreText;
 
     [ContextMenu("add point")]
-    public void addScore()
+
+    private void Start()
     {
-        playerScore = playerScore + 1;
+        
+        scoreText = GetComponent<Text>();
+        scoreText.text = "0";
+    }
+    private void Update()
+    {
+
         scoreText.text = playerScore.ToString();
     }
 }

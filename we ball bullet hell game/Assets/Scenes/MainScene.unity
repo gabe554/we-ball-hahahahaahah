@@ -34876,6 +34876,7 @@ GameObject:
   - component: {fileID: 796897546}
   - component: {fileID: 796897548}
   - component: {fileID: 796897547}
+  - component: {fileID: 796897549}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -34946,6 +34947,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796897545}
   m_CullTransparentMesh: 1
+--- !u!114 &796897549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796897545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6549753b739f9884d9a21b15e5f63660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 796897547}
 --- !u!1 &872770138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7811530388448486823, guid: dd053a8b94440f9438bc5a90db8330d3, type: 3}
@@ -38014,6 +38028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6549753b739f9884d9a21b15e5f63660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 796897547}
 --- !u!4 &1976651296
 Transform:
   m_ObjectHideFlags: 0
@@ -38151,7 +38166,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 5564692544984665561, guid: dd053a8b94440f9438bc5a90db8330d3, type: 3}
       propertyPath: dashSpeed
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5564692544984665561, guid: dd053a8b94440f9438bc5a90db8330d3, type: 3}
       propertyPath: activeMoveSpeed

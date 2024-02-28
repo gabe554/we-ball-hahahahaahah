@@ -11,11 +11,8 @@ public class enemyMovement : MonoBehaviour
     [SerializeField] float enemyHealth, maxHealth = 3;
     public GameObject player;
     public float speed;
-
-    public int playerScore;
-    public Text scoreText;
-
     private bool dead = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,17 +26,22 @@ public class enemyMovement : MonoBehaviour
 
         if (enemyHealth <= 0 && !dead)
         {
+            if(logicScript.playerScore >= HSScore.HScore)
+            {
+                HSScore.HScore += 1;
+            }
+            
+            logicScript.playerScore += 1;
             dead = true;
             Destroy(gameObject);
 
-            // Increase player's score
-            playerScore++;
-            scoreText.text = playerScore.ToString();
+
         }
+
     }
 
 // Update is called once per frame
-void Update()
+void Update() 
     {
         Vector2 direction  = player.transform.position - transform.position;
 
