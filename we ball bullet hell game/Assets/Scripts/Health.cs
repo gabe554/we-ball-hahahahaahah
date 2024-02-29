@@ -58,6 +58,7 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             SceneManager.LoadScene("dead as hell");
+            logicScript.playerScore = 0;
         }
     }
 }
